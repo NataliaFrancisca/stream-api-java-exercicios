@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.OptionalDouble;
 import java.util.Set;
 import java.util.function.BinaryOperator;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class Exercicios {
@@ -90,4 +91,55 @@ public class Exercicios {
         List<Integer> listaMultiplosDeTresOuCinco = numeros.stream().filter(multiplosDeTresOuCinco).toList();
         System.out.println("Os números multiplos de 3 ou 5: " + listaMultiplosDeTresOuCinco);
     }
+
+    public void somaDosQuadrados(){
+        // 11. Encontre a soma dos quadrados de todos os números da lista:
+        List<Integer> numerosAoQuadrados = numeros.stream().map(num -> num * num).toList();
+        int somaNumerosAoQuadrado = numerosAoQuadrados.stream().reduce(0, Integer::sum);
+        System.out.println("A soma dos números elevado ao quadrado é: " + somaNumerosAoQuadrado);
+    }
+
+    public void produtoDosNumeros(){
+        // 12. Encontre o produto de todos os números da lista
+        int somaProduto = numeros.stream().reduce(1, (a,b) -> a*b);
+        System.out.println("O produto de todos os números é: " + somaProduto);
+    }
+
+    public void filtrarNumerosIntervalo(int intervaloA, int intervaloB) {
+        // 13. Filtrar os números que estão dentro de um intervalo:
+        if(intervaloA < intervaloB && intervaloB > intervaloA){
+            List<Integer> numerosFiltro = numeros.stream().filter(a -> a > intervaloA && a < intervaloB).toList();
+            System.out.println("Os números que estão entre " + intervaloA + " - " + intervaloB + ": " + numerosFiltro);
+        }else{
+            System.out.println("Digite um intervalo válido :)");
+        }
+    }
+
+    public void maiorNumeroPrimo(){
+        // 14. Encontre o maior número primo da lista:
+        Predicate<Integer> numeroEPrimo = (n) -> {
+            if(n < 2)
+                return false;
+
+            for(int i = 2; i <= Math.sqrt(n); i++){
+                if(n % i == 0){
+                    return false;
+                }
+            }
+            return true;
+        };
+
+        List<Integer> numerosPrimos = numeros.stream().filter(numeroEPrimo).toList();
+        int maiorNumeroPrimo = numerosPrimos.stream().max(Integer::compareTo).get();
+        System.out.println("O maior número primo é: " + maiorNumeroPrimo);
+    }
+
+    public void existeNumerosNegativos(){
+        // 15. Verifique se a lista contém pelo menos um número negativo:
+        boolean existeNumerosNegativos = numeros.stream().anyMatch(n -> n < 0);
+        System.out.println("Existe números negativos? " + (existeNumerosNegativos ? "Sim" : "Não"));
+    }
+
+
+
 }

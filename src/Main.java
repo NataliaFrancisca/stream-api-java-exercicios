@@ -7,6 +7,8 @@ public class Main {
 
         Exercicios exercicios = new Exercicios(numeros);
 
-        exercicios.todosOsNumerosSaoPositivos();
+        exercicios.maiorNumeroPrimo();
+        exercicios.existeNumerosNegativos();
+
     }
 }
