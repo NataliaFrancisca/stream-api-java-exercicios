@@ -12,11 +12,11 @@
 - [X] Desafio 8 - Somar os dígitos de todos os números da lista
 - [X] Desafio 9 - Verificar se todos os números da lista são distintos (não se repetem)
 - [X] Desafio 10 - Agrupe os valores ímpares múltiplos de 3 ou de 5
-- [ ] Desafio 11 - Encontre a soma dos quadrados de todos os números da lista
-- [ ] Desafio 12 - Encontre o produto de todos os números da lista
-- [ ] Desafio 13 - Filtrar os números que estão dentro de um intervalo
-- [ ] Desafio 14 - Encontre o maior número primo da lista
-- [ ] Desafio 15 - Verifique se a lista contém pelo menos um número negativo
+- [X] Desafio 11 - Encontre a soma dos quadrados de todos os números da lista
+- [X] Desafio 12 - Encontre o produto de todos os números da lista
+- [X] Desafio 13 - Filtrar os números que estão dentro de um intervalo
+- [X] Desafio 14 - Encontre o maior número primo da lista
+- [X] Desafio 15 - Verifique se a lista contém pelo menos um número negativo
 - [ ] Desafio 16 - Agrupe os números em pares e ímpares
 - [ ] Desafio 17 - Filtrar os números primos da lista
 - [ ] Desafio 18 - Verifique se todos os números da lista são iguais
