@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.OptionalDouble;
 import java.util.Set;
 import java.util.function.BinaryOperator;
-import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class Exercicios {
@@ -140,6 +139,60 @@ public class Exercicios {
         System.out.println("Existe números negativos? " + (existeNumerosNegativos ? "Sim" : "Não"));
     }
 
+    public void agruparNumeros(){
+        // 16. Agrupe os números em pares e ímpares
+
+        Predicate<Integer> numerosPares = numero -> numero % 2 == 0;
+        Predicate<Integer> numerosImpares = numero -> numero % 2 != 0;
+
+        List<Integer> listaNumerosPares = numeros.stream().filter(numerosPares).toList();
+        List<Integer> listaNumerosImpares = numeros.stream().filter(numerosImpares).toList();
+
+        System.out.println("Numeros pares: " + listaNumerosPares);
+        System.out.println("Numeros impares: " + listaNumerosImpares);
+
+    }
+
+    public void filtarNumerosPrimos(){
+        // 17. Filtrar os números primos da lista
+
+        Predicate<Integer> numeroEPrimo = (n) -> {
+            if(n < 2)
+                return false;
+
+            for(int i = 2; i <= Math.sqrt(n); i++){
+                if(n % i == 0){
+                    return false;
+                }
+            }
+            return true;
+        };
+
+        List<Integer> numerosPrimos = numeros.stream().filter(numeroEPrimo).toList();
+        System.out.println("Números Primos: " + numerosPrimos);
+    }
+
+    public void todosOsNumerosSaoIguais(){
+        // 18. Verifique se todos os números da lista são iguais
+        boolean saoTodosIguais = numeros.stream().allMatch(n -> n.equals(numeros.getFirst()));
+
+        if(saoTodosIguais){
+            System.out.println("São todos iguais :)");
+        }else{
+            System.out.println("Não são todos iguais");
+        }
+    }
+
+    public void somaNumerosDivisiveisPorTresECinco(){
+        // 19. Encontre a soma dos números divisíveis por 3 e 5
+        Predicate<Integer> divisivelDeTresOuCinco = (num) -> (num % 3 == 0 || num % 5 == 0);
+
+        List<Integer> numerosDivisiveis = numeros.stream().filter(divisivelDeTresOuCinco).toList();
+        System.out.println("Números divisíveis por 3 e 5: " + numerosDivisiveis);
+
+        int somaNumeros = numerosDivisiveis.stream().reduce(0, Integer::sum);
+        System.out.println("Soma dos números divisíveis por 3 e 5: " + somaNumeros);
+    }
 
 
 }

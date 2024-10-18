@@ -7,8 +7,6 @@ public class Main {
 
         Exercicios exercicios = new Exercicios(numeros);
 
-        exercicios.maiorNumeroPrimo();
-        exercicios.existeNumerosNegativos();
-
+        exercicios.somaNumerosDivisiveisPorTresECinco();
     }
 }
