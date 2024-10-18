@@ -17,7 +17,7 @@
 - [X] Desafio 13 - Filtrar os números que estão dentro de um intervalo
 - [X] Desafio 14 - Encontre o maior número primo da lista
 - [X] Desafio 15 - Verifique se a lista contém pelo menos um número negativo
-- [ ] Desafio 16 - Agrupe os números em pares e ímpares
-- [ ] Desafio 17 - Filtrar os números primos da lista
-- [ ] Desafio 18 - Verifique se todos os números da lista são iguais
-- [ ] Desafio 19 - Encontre a soma dos números divisíveis por 3 e 5
+- [X] Desafio 16 - Agrupe os números em pares e ímpares
+- [X] Desafio 17 - Filtrar os números primos da lista
+- [X] Desafio 18 - Verifique se todos os números da lista são iguais
+- [X] Desafio 19 - Encontre a soma dos números divisíveis por 3 e 5
